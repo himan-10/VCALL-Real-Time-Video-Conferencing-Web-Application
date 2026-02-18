@@ -19,7 +19,8 @@ const io = connectToSocket(server); //then io new server connected to server
 app.set("port", process.env.PORT || 8000);
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin:"https://virtualcall.netlify.app/",
     credentials: true,
   })
 );
