@@ -106,7 +106,7 @@ export const AuthContext = createContext(null);
 
 // axios client
 const client = axios.create({
-  baseURL: "http://localhost:8000/api/v1/users",
+  baseURL: "https://vcall-real-time-video-conferencing-web-ew4s.onrender.com/api/v1/users",
   withCredentials: true,
 });
 

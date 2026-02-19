@@ -1,10 +1,10 @@
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://vcall-real-time-video-conferencing-web-ew4s.onrender.com");
 
 socket.on("connect", () => {
     console.log("Connected to server:", socket.id);
-    socket.emit("join-call", "http://localhost:5173/room1", "TestUser");
+    socket.emit("join-call", "https://virtualcall.netlify.app/room1", "TestUser");
 });
 
 socket.on("user-joined", (id, users, username) => {

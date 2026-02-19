@@ -20,7 +20,7 @@ app.set("port", process.env.PORT || 8000);
 app.use(
   cors({
     // origin: "http://localhost:5173",
-    origin:"https://virtualcall.netlify.app/",
+    origin:"https://virtualcall.netlify.app",
     credentials: true,
   })
 );
@@ -42,10 +42,10 @@ const start = async () => {
   const connectionDb = await mongoose.connect(
     process.env.MONGO_URI
   );
-  console.log(`MONGO Connected DB Host:${connectionDb.connection.host}`);
+  // console.log(`MONGO Connected DB Host:${connectionDb.connection.host}`);
   //io server start
   server.listen(app.get("port"), () => {
-    console.log("server on port 8000");
+    console.log(`Server running on port ${app.get("port")}`);
   });
 };
 start();
